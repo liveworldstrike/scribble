@@ -99,4 +99,18 @@ public class DrawDemo
         }
         
     }
+    
+    /**
+     * draw Pentagon
+     */
+    public void drawPentagon()
+    {
+        Pen pen = new Pen(125,125,myCanvas);
+        pen.setColor(Color.GREEN);
+        for (int i=0; i<5; i++) {
+            pen.move(125);
+            pen.turn(72);
+        }
+    
+    }
 }
