@@ -73,11 +73,11 @@ public class DrawDemo
             int green = random.nextInt(256);
             int blue = random.nextInt(256);
             pen.setColor(new Color(red, green, blue));
-            
+
             pen.randomSquiggle();
         }
     }
-    
+
     /**
      * Clear the screen.
      */
@@ -85,7 +85,7 @@ public class DrawDemo
     {
         myCanvas.erase();
     }
-    
+
     /**
      * Draw triangle
      */
@@ -97,9 +97,9 @@ public class DrawDemo
             pen.move(120);
             pen.turn(120);
         }
-        
+
     }
-    
+
     /**
      * draw Pentagon
      */
@@ -111,6 +111,23 @@ public class DrawDemo
             pen.move(125);
             pen.turn(72);
         }
-    
+
+    }
+
+    /**
+     * draw Polygon
+     */
+    public void drawPolygon(int n)
+    {
+        if (n>2){
+            Pen pen = new Pen(125,125,myCanvas);
+            for (int i=0; i<n; i++) {
+                pen.move(125);
+                pen.turn(360/n);
+            }
+        }
+        else {
+            System.out.println("error numero insuficiente introducir valor mayor de dos ");
+        }
     }
 }
