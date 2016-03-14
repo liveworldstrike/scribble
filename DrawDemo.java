@@ -130,4 +130,16 @@ public class DrawDemo
             System.out.println("error numero insuficiente introducir valor mayor de dos ");
         }
     }
+    
+    /**
+     * draw drawSpiral
+     */
+    public void drawSpiral()
+    {
+        Pen pen = new Pen(200,200,myCanvas);
+        for(int a= 1;a<60;a++){
+            pen.move(a * 6);
+            pen.turn(90);
+        }
+    }
 }
